@@ -36,15 +36,36 @@ const List: React.FC = () => {
         {value: 7, label: 'Julho'},
     ]
 
-    const years = [
-        {value: 2022, label: 2022},
-        {value: 2021, label: 2021},
-        {value: 2020, label: 2020},
-    ]
+    // const years = [
+    //     {value: 2022, label: 2022},
+    //     {value: 2021, label: 2021},
+    //     {value: 2020, label: 2020},
+    // ]
 
     const listData = useMemo(() => {
         return type === 'entries' ? entries : expenses;
     }, [type])
+
+    const years = useMemo(() => {
+        let uniqueYears: number[] = [];
+
+        listData.forEach(item => {
+            const date = new Date(item.date)
+            const year = date.getFullYear()
+
+            if (!uniqueYears.includes(year)) {
+                uniqueYears.push(year)
+            }
+        })
+
+        return uniqueYears.map(year => {
+            return {
+                value: year,
+                label: year,
+            }
+        })
+
+    }, [])
 
     useEffect(() => {
         const filteredData = listData.filter(item => {
@@ -54,8 +75,6 @@ const List: React.FC = () => {
 
             return month === monthSelected && year === yearSelected
         })
-
-        console.log(filteredData)
 
         const formattedData = filteredData.map((item, idx) => {
             return {
