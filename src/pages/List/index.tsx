@@ -10,6 +10,7 @@ import entries from "../../repositories/entries";
 import expenses from "../../repositories/expenses";
 import formatCurrency from "../../utils/formatCurrency";
 import formatDate from "../../utils/formatDate";
+import listOfMonths from '../../utils/months'
 
 import { Container, Content, Filters } from "./styles";
 
@@ -29,18 +30,6 @@ const List: React.FC = () => {
     const [yearSelected, setYearSelected] = useState<string>(String(new Date().getFullYear()))
 
     const { type } = useParams()
-
-    const months = [
-        {value: 9, label: 'Setembro'},
-        {value: 8, label: 'Agosto'},
-        {value: 7, label: 'Julho'},
-    ]
-
-    // const years = [
-    //     {value: 2022, label: 2022},
-    //     {value: 2021, label: 2021},
-    //     {value: 2020, label: 2020},
-    // ]
 
     const listData = useMemo(() => {
         return type === 'entries' ? entries : expenses;
@@ -62,6 +51,17 @@ const List: React.FC = () => {
             return {
                 value: year,
                 label: year,
+            }
+        })
+
+    }, [listData])
+
+    const months = useMemo(() => {
+
+        return listOfMonths.map((month, idx) => {
+            return {
+                value: idx + 1,
+                label: month,
             }
         })
 
