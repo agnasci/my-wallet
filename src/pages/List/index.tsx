@@ -17,7 +17,7 @@ import { Container, Content, Filters } from "./styles";
 type tData = {
     id: string;
     description: string;
-    amoutFormatted: string;
+    amountFormatted: string;
     frequency: string;
     dateFormatted: string;
     tagColor: string;
@@ -81,7 +81,7 @@ const List: React.FC = () => {
             return {
                 id: idx.toString(),
                 description: item.description,
-                amoutFormatted: formatCurrency(Number(item.amount)),
+                amountFormatted: formatCurrency(Number(item.amount)),
                 frequency: item.frequency,
                 dateFormatted: formatDate(item.date),
                 tagColor: item.frequency  === 'recurrent' ? '#4E41F0' : '#E44C4E'
@@ -164,7 +164,7 @@ const List: React.FC = () => {
                         tagColor={item.tagColor}
                         title={item.description}
                         subtitle={item.dateFormatted}
-                        amount={item.amoutFormatted}
+                        amount={item.amountFormatted}
                         />
                     ))
                 }
