@@ -130,7 +130,7 @@ const List: React.FC = () => {
         <Container>
             <ContentHeader
             title={type === 'entries' ? 'Entradas' : 'Saídas'}
-            lineColor={type === 'entries' ? '#F7931B' : '#E44C4E'}
+            lineColor={type === 'entries' ? '#4E41F0' : '#E44C4E'}
             >
                 <SelectInput options={months} onChange={(e) => handleMonthSelected(e.target.value)} defaultValue={monthSelected} />
 
