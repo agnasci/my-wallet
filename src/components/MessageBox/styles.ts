@@ -16,12 +16,29 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    > header img {
+    > header div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    > header div h1 {
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+    > header div img {
         width: 35px;
         margin-left: 10px;
     }
 
     > header p {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    > footer p {
         font-size: 18px;
+        font-weight: 400;
     }
 `

@@ -19,15 +19,18 @@ const MessageBox: React.FC<Props> = ({
         <>
             <Container>
                 <header>
-                    <h1>
-                        {title}
+                    <div>
+                        <h1>
+                            {title}
+                        </h1>
+                        
                         <img src={icon} alt={title} />
-                    </h1>
+                    </div>
 
                     <p>{description}</p>
                 </header>
                 <footer>
-                    <span>{footerText}</span>
+                    <p>{footerText}</p>
                 </footer>
             </Container>
         </>
