@@ -2,12 +2,17 @@ import React, { useMemo, useState } from "react";
 
 import ContentHeader from "../../components/ContentHeader";
 import SelectInput from "../../components/SelectInput";
+import WalletBox from "../../components/WalletBox"
+import MessageBox from "../../components/MessageBox";
 
 import entries from "../../repositories/entries";
 import expenses from "../../repositories/expenses";
 import listOfMonths from '../../utils/months'
 
-import { Container } from "./styles";
+import happyImg from '../../assets/happy.svg'
+// import sadImg from '../../assets/sad.svg'
+
+import { Container, Content } from "./styles";
 
 const Dashboard: React.FC = () => {
 
@@ -75,6 +80,39 @@ const Dashboard: React.FC = () => {
 
                 <SelectInput options={years} onChange={(e) => handleYearSelected(e.target.value)} defaultValue={yearSelected} />
             </ContentHeader>
+
+            <Content>
+                <WalletBox
+                    title="Saldo"
+                    amount={150.00}
+                    footerlabel="Atualizado com base nas entradas e saídas"
+                    icon="dollar"
+                    color="#4E41F0"
+                />
+
+                <WalletBox
+                    title="Entradas"
+                    amount={5000.00}
+                    footerlabel="Atualizado com base nas entradas e saídas"
+                    icon="arrowUp"
+                    color="#F7931B"
+                />
+
+                <WalletBox
+                    title="Saídas"
+                    amount={4850.00}
+                    footerlabel="Atualizado com base nas entradas e saídas"
+                    icon="arrowDown"
+                    color="#E44C4E"
+                />
+
+                <MessageBox
+                    title="Muito bem!"
+                    description="Sua carteira está positiva!"
+                    footerText="Continue assim. Considere investir seu saldo."
+                    icon={happyImg}
+                />
+            </Content>
         </Container>
     )
 }
