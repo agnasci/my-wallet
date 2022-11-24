@@ -1,4 +1,20 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const animate = keyframes`
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+`
 
 type SubtitleProps = {
     color: string;
@@ -16,6 +32,8 @@ export const Container = styled.div`
     border-radius: 7px;
 
     display: flex;
+
+    animation: ${animate} 0.5s;
 
     @media(max-width: 1200px) {
        display: flex;
