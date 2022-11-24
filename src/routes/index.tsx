@@ -2,12 +2,25 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 
-import App from './app.routes'
+import { useAuth } from '../hooks/auth'
 
-const Routes: React.FC = () => (
-    <Layout>
-        <App />
-    </Layout>
-)
+import App from './app.routes'
+import Auth from './auth.routes'
+
+const Routes: React.FC = () => {
+    const { logged } = useAuth()
+
+    return (
+        <>
+            {logged ? (
+                <Layout>
+                    <App />
+                </Layout>
+            ) : (
+                <Auth />
+            )}
+        </>
+    )
+}
 
 export default Routes
