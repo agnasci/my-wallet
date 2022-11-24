@@ -19,7 +19,7 @@ const SignIn: React.FC = () => {
         <>
             <Container>
                 <Logo>
-                    <img src={logoImg} alt="My Wallet" />
+                    <img src={logoImg} alt="Minha Carteira" />
                     <h2>Minha Carteira</h2>
                 </Logo>
 
