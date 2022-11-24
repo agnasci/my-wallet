@@ -330,7 +330,7 @@ const Dashboard: React.FC = () => {
                 <WalletBox
                     title="Saldo"
                     amount={totalBalance}
-                    footerlabel="Atualizado com base nas entradas e saídas"
+                    footerlabel="Atualizado com base nas receitas e despesas."
                     icon="dollar"
                     color="#4E41F0"
                 />
@@ -338,7 +338,7 @@ const Dashboard: React.FC = () => {
                 <WalletBox
                     title="Entradas"
                     amount={totalEntries}
-                    footerlabel="Atualizado com base nas entradas e saídas"
+                    footerlabel="Soma de todos as suas receitas."
                     icon="arrowUp"
                     color="#F7931B"
                 />
@@ -346,7 +346,7 @@ const Dashboard: React.FC = () => {
                 <WalletBox
                     title="Saídas"
                     amount={totalExpenses}
-                    footerlabel="Atualizado com base nas entradas e saídas"
+                    footerlabel="Soma de todas as suas despesas."
                     icon="arrowDown"
                     color="#E44C4E"
                 />

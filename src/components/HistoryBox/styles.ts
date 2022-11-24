@@ -36,7 +36,9 @@ export const Header = styled.header`
         margin-bottom: 20px;
     }
 
-
+    @media(max-width: 1280px) {
+       flex-direction: column;
+    }
 `
 
 export const SubtitleContainer = styled.ul`
@@ -68,5 +70,12 @@ export const Subtitle = styled.li<SubtitleProps>`
 
     > span {
         margin-left: 5px;
+    }
+
+    @media(max-width: 1280px) {
+        > div {
+            width: 27px;
+            height: 27px;
+        }
     }
 `

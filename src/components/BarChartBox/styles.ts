@@ -16,6 +16,14 @@ export const Container = styled.div`
     border-radius: 7px;
 
     display: flex;
+
+    @media(max-width: 1200px) {
+       display: flex;
+       flex-direction: column;
+
+       width: 100%;
+       height: auto;
+    }
 `
 
 export const LeftSide = styled.aside`
@@ -26,6 +34,12 @@ export const LeftSide = styled.aside`
     > h2 {
         padding-left: 22px;
         margin-bottom: 10px;
+    }
+
+    @media(max-width: 1200px) {
+        > h2 {
+            text-align: center;
+        }
     }
 `
 
@@ -44,6 +58,12 @@ export const SubtitleContainer = styled.ul`
 
     height: 143px;
     padding-right: 15px;
+
+    @media(max-width: 1200px) {
+       display: flex;
+
+       height: auto;
+    }
 `
 
 export const Subtitle = styled.li<SubtitleProps>`
@@ -70,5 +90,14 @@ export const Subtitle = styled.li<SubtitleProps>`
 
     > span {
         margin-left: 5px;
+    }
+
+    @media(max-width: 1200px) {
+       > div {
+        width: 40px;
+        height: 40px;
+
+        font-size: 14px;
+       }
     }
 `

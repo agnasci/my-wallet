@@ -16,6 +16,11 @@ export const Container = styled.div`
     border-radius: 7px;
 
     display: flex;
+
+    @media(max-width: 770px) {
+       display: flex;
+       width: 100%;
+    }
 `
 
 export const LeftSide = styled.aside`
@@ -23,6 +28,26 @@ export const LeftSide = styled.aside`
 
     > h2 {
         margin-bottom: 20px;
+    }
+
+    @media(max-width: 1345px) {
+       padding: 0 15px 5px;
+       margin-bottom: 7px;
+
+       > h2 {
+        margin-top: 15px;
+        margin-bottom: 7px;
+        /* text-align: center; */
+       }
+    }
+
+    @media(max-width: 420px) {
+       padding: 15px;
+       margin-bottom: 7px;
+
+       > h2 {
+        margin-bottom: 20px;
+       }
     }
 `
 
@@ -45,6 +70,11 @@ export const SubtitleContainer = styled.ul`
     ::-webkit-scrollbar-track {
         background-color: ${props => props.theme.colors.tertiary};
         border-radius: 10px;
+    }
+
+    @media(max-width: 1345px) {
+       display: flex;
+       flex-direction: column;
     }
 `
 

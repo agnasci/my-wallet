@@ -41,4 +41,30 @@ export const Container = styled.div`
         font-size: 18px;
         font-weight: 400;
     }
+
+    @media(max-width: 770px) {
+        width: 100%;
+
+        > header div h1 {
+            font-size: 24px;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        > header p, > footer p {
+            font-size: 14px;
+        } 
+    }
+
+    @media(max-width: 420px) {
+        width: 100%;
+        height: auto;
+
+        > header p {
+            margin-bottom: 15px;
+        }
+    }
 `
