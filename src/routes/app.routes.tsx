@@ -6,13 +6,13 @@ import Dashboard from '../pages/Dashboard'
 import List from '../pages/List'
 
 const App: React.FC = () => (
-    <Router>
-        <Routes>
-            <Route path="/" element={<Dashboard />} />
+  <Router>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
 
-            <Route path="/list/:type" element={<List />} />
-        </Routes>
-    </Router>
+      <Route path="/list/:type" element={<List />} />
+    </Routes>
+  </Router>
 )
 
 export default App

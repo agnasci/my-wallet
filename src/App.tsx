@@ -6,16 +6,15 @@ import { useTheme } from './hooks/theme'
 
 import Routes from './routes'
 
-
 const App: React.FC = () => {
-    const { theme } = useTheme()
+  const { theme } = useTheme()
 
-    return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyles />
-            <Routes />
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Routes />
+    </ThemeProvider>
+  )
 }
 
 export default App

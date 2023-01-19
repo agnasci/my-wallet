@@ -1,13 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
 
-import { ThemeProvider } from './hooks/theme';
-import { AuthProvider } from './hooks/auth';
+import { ThemeProvider } from './hooks/theme'
+import { AuthProvider } from './hooks/auth'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <ThemeProvider>
@@ -16,4 +14,4 @@ root.render(
       </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>
-);
+)

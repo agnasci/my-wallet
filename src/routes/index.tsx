@@ -8,19 +8,19 @@ import App from './app.routes'
 import Auth from './auth.routes'
 
 const Routes: React.FC = () => {
-    const { logged } = useAuth()
+  const { logged } = useAuth()
 
-    return (
-        <>
-            {logged ? (
-                <Layout>
-                    <App />
-                </Layout>
-            ) : (
-                <Auth />
-            )}
-        </>
-    )
+  return (
+    <>
+      {logged ? (
+        <Layout>
+          <App />
+        </Layout>
+      ) : (
+        <Auth />
+      )}
+    </>
+  )
 }
 
 export default Routes
